@@ -40,6 +40,8 @@ private:
 	unique_ptr<GbControlManager> _controlManager;
 
 	GameboyModel _model = GameboyModel::AutoFavorGbc;
+	
+	bool _linkCableConnected = false;
 
 	bool _hasBattery = false;
 
@@ -138,4 +140,5 @@ public:
 
 	void RefreshRamCheats();
 	void InitializeRam(void* data, uint32_t length);
+	bool IsLinkCableConnected();
 };

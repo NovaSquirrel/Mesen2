@@ -11,5 +11,7 @@ namespace Mesen.Config
 
 		[Reactive] public UInt16 ServerPort { get; set; } = 8888;
 		[Reactive] public string ServerPassword { get; set; } = "";
+
+		[Reactive] public bool LinkCable { get; set; } = false;
 	}
 }

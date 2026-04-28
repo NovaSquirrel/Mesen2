@@ -42,6 +42,10 @@ public struct GbMemoryManagerState
 	public byte SerialData;
 	public byte SerialControl;
 	public byte SerialBitCount;
+	public byte MostRecentSerialBit;
+	public byte LinkedConsoleSerialData;
+	public byte LinkedConsoleSerialControl;
+	public byte LinkedConsoleSerialBitCount;
 
 	[MarshalAs(UnmanagedType.ByValArray, SizeConst = 0x100)]
 	public byte[] IsReadRegister;

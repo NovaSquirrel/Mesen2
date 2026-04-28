@@ -704,3 +704,8 @@ void Gameboy::InitializeRam(void* data, uint32_t length)
 	EmuSettings* settings = _emu->GetSettings();
 	settings->InitializeRam(settings->GetGameboyConfig().RamPowerOnState, data, length);
 }
+
+bool Gameboy::IsLinkCableConnected()
+{
+	return _linkCableConnected;
+}

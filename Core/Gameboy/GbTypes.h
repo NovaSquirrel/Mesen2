@@ -390,6 +390,11 @@ struct GbMemoryManagerState
 	uint8_t SerialData;
 	uint8_t SerialControl;
 	uint8_t SerialBitCount;
+	bool MostRecentSerialBit;
+	uint8_t LinkedConsoleSerialData;
+	uint8_t LinkedConsoleSerialControl;
+	uint8_t LinkedConsoleSerialBitCount;
+	bool LinkedConsoleMostRecentSerialBit;
 
 	bool IsReadRegister[0x100];
 	bool IsWriteRegister[0x100];

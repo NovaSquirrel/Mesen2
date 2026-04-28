@@ -27,6 +27,8 @@
 
 			<TextBlock Grid.Row="1" Text="{l:Translate lblPassword}" />
 			<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ServerPassword, Converter={StaticResource NullTextConverter}}" />
+
+			<CheckBox Grid.Row="2" IsChecked="{Binding LinkCable}" Content="{l:Translate chkLinkCable}" />
 		</Grid>
 	</DockPanel>
 </Window>
