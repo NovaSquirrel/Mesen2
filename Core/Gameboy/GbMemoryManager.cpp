@@ -85,7 +85,7 @@ void GbMemoryManager::ExecTimerDmaSerial()
 		_dmaController->Exec();
 	}
 
-	if(_state.SerialBitCount && ((_state.SerialControl & 0x81) == 0x81) && (_cpu->GetState().CycleCount & 0x1FF) == 0) {
+	if(_state.SerialBitCount && ((_state.SerialControl & 0x81) == 0x81) && (_cpu->GetState().CycleCount & ((_state.SerialControl & 0x2) ? 0xF : 0x1FF)) == 0) {
 		_state.MostRecentSerialBit = (_state.SerialData & 0x80) == 0x80;
 		if(_gameboy->GetLinkedConsole() != nullptr) {
 			_state.SerialData = (_state.SerialData << 1) | (_gameboy->GetLinkedConsole()->GetMemoryManager()->ExchangeSerialBits(_state.MostRecentSerialBit) ? 0x01 : 0x00);
