@@ -120,6 +120,13 @@ namespace Mesen.Config
 		public UInt32 WaveVol;
 	}
 
+	public enum GbLocalLinkOutputOption
+	{
+		Both = 0,
+		MainSystemOnly = 1,
+		SubSystemOnly = 2
+	}
+
 	public enum GameboyModel
 	{
 		AutoFavorBest,
