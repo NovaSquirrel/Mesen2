@@ -38,7 +38,6 @@ namespace Mesen.ViewModels
 			ControllerType.SnesController,
 			ControllerType.SnesMouse,
 			ControllerType.SuperScope,
-			ControllerType.SnesNttDataKeypad,
 		};
 
 		[Obsolete("For designer only")]

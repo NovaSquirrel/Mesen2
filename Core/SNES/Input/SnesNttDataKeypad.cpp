@@ -122,12 +122,7 @@ uint8_t SnesNttDataKeypad::ReadRam(uint16_t addr)
 
 	if(IsCurrentPort(addr)) {
 		StrobeProcessRead();
-
-		if(_port >= 2) {
-			output = (_stateBuffer & 0x01) << 1; //P3/P4 are reported in bit 2
-		} else {
-			output = _stateBuffer & 0x01;
-		}
+		output = _stateBuffer & 0x01;
 		_stateBuffer >>= 1;
 
 		//Bits past the first 32 are always 1
